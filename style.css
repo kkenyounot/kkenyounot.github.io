@@ -1,0 +1,87 @@
+/* Variables--------------------------------------------------------------- */
+/* Used so that you can control colours, text sizes, page-wide instead of having to manaullay adjust them! */
+:root{
+    --c-grey: #8f8f8f;
+    --c-yellow: #fff200;
+    --c-green: #00ff00;
+    --c-skin: #d7ab90;
+}
+
+
+
+
+/* Font --------------------------------------------------------------- */
+
+@font-face {
+     font-family: 'manifont grotesk';
+     src: url('Fonts/manifontgrotesk.ttf');
+}
+
+@font-face {
+    font-family: 'batmip book';
+    src: url('Fonts/batmipbook.otf');
+}
+
+@font-face {
+    font-family: 'monument mono';
+    src: url('Fonts/monumentmono.otf');
+}
+body {
+    background-color: gray;
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+/* Text --------------------------------------------------------------- */
+
+div.hero {
+    font-size: 10rem;
+    font-family: 'manifont grotesk';
+}
+
+div.callout {
+    font-size: 5rem;
+    font-family: 'batmip book';
+}
+
+div.body {
+    font-size: 2rem;
+    font-family: 'manifont grotesk';
+
+}
+   
+div.caption {
+    font-size: 1rem;
+    font-family: 'monument mono';
+    color: var(--c-yellow);
+}
+
+/* Colours --------------------------------------------------------------- */
+
+div.swatch {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-right: 30px;
+}
+
+div.container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.bg-grey {
+    background-color: var(--c-grey);
+}
+
+div.bg-yellow {
+    background-color: var(--c-yellow);
+}
+
+div.bg-green {
+    background-color: var(--c-green);
+}
+
+div.bg-skin {
+    background-color: var(--c-skin);
+}
