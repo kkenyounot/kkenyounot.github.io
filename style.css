@@ -1,87 +1,628 @@
 /* Variables--------------------------------------------------------------- */
 /* Used so that you can control colours, text sizes, page-wide instead of having to manaullay adjust them! */
-:root{
-    --c-grey: #8f8f8f;
-    --c-yellow: #fff200;
-    --c-green: #00ff00;
-    --c-skin: #d7ab90;
+:root {
+  --c-grey: #8f8f8f;
+  --c-yellow: #fff200;
+  --c-green: #00ff00;
+  --c-skin: #d7ab90;
+  --c-white: #ffffff;
 }
 
+img {
+  width: 100%;
+}
 
-
+* {
+  box-sizing: border-box;
+}
 
 /* Font --------------------------------------------------------------- */
 
 @font-face {
-     font-family: 'manifont grotesk';
-     src: url('Fonts/manifontgrotesk.ttf');
+  font-family: "manifont grotesk";
+  src: url("Fonts/manifontgrotesk.ttf");
 }
 
 @font-face {
-    font-family: 'batmip book';
-    src: url('Fonts/batmipbook.otf');
+  font-family: "batmip book";
+  src: url("Fonts/batmipbook.otf");
 }
 
 @font-face {
-    font-family: 'monument mono';
-    src: url('Fonts/monumentmono.otf');
+  font-family: "monument mono";
+  src: url("Fonts/monumentmono.otf");
 }
+@font-face {
+  font-family: "monument semimono";
+  src: url("Fonts/monumentsemimono.otf");
+}
+
+@font-face {
+  font-family: "practice sans";
+  src: url("Fonts/practicesans.otf");
+}
+
 body {
-    background-color: gray;
-    margin-left: 200px;
-    margin-top: 200px;
+  background-color: gray;
+}
+
+/* Flex ------------------------------------------------------------- */
+
+div.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.flex-row {
+  flex-direction: row;
+}
+
+div.flex-column {
+  flex-direction: column;
+}
+
+div.flex-aligncenter {
+  justify-content: center;
+  align-items: center;
+}
+
+div.flex-spacebetween {
+  justify-content: space-between;
+}
+
+div.flex-alignitemscenter {
+  align-items: center;
+}
+
+div.flex-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.flex-gap10px {
+  gap: 10px;
+}
+
+/* Position ------------ */
+
+div.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.position-absolute-i {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+div.position-absolute-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+div.position-absolute-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+div.position-absolute-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+div.position-var {
+  position: absolute;
+  left: var(--x, 0%);
+  top: var(--y, 0%);
+}
+
+div.position-absolute-center {
+  position: absolute;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+div.position-relative {
+  position: relative;
+}
+
+div.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+div.z-999 {
+  z-index: 999;
+}
+
+/* Width and height ------------------------------------------------------ */
+
+div.width10 {
+  width: 10%;
+}
+
+div.width16 {
+  width: 16.66666667%;
+}
+
+div.width20 {
+  width: 20%;
+}
+
+div.width25 {
+  width: 25%;
+}
+
+div.width30 {
+  width: 30%;
+}
+
+div.width33 {
+  width: 33.333333333%;
+}
+
+div.width50 {
+  width: 50%;
+}
+
+div.width75 {
+  width: 75%;
+}
+
+div.width100 {
+  width: 100%;
+}
+
+div.height30 {
+  height: 30%;
+}
+
+div.height50 {
+  height: 50%;
+}
+
+div.height100 {
+  height: 100%;
+}
+
+div.boxtest {
+  border: 1px solid red;
+}
+
+div.width100vw {
+  width: 100vw;
+}
+
+div.height100vh {
+  height: 100vh;
+}
+/* Margins ---------------------------------------------------------------*/
+
+div.margin-t-05rem {
+  margin-top: 0.5rem;
+}
+
+div.margin-t-1rem {
+  margin-top: 1rem;
+}
+
+div.margin-t-2rem {
+  margin-top: 2rem;
+}
+
+div.margin-t-5rem {
+  margin-top: 5rem;
+}
+
+div.margin-t-20rem {
+  margin-top: 20rem;
+}
+
+div.margin-l-05rem {
+  margin-left: 0.5rem;
+}
+
+div.margin-l-1rem {
+  margin-left: 1rem;
+}
+
+div.margin-l-2rem {
+  margin-left: 2rem;
+}
+
+div.margin-r-05rem {
+  margin-right: 0.5rem;
+}
+
+div.margin-r-1rem {
+  margin-right: 1rem;
+}
+
+div.margin-r-2rem {
+  margin-right: 2rem;
+}
+
+div.margin-b-05rem {
+  margin-bottom: 0.5rem;
+}
+
+div.margin-b-1rem {
+  margin-bottom: 1rem;
+}
+
+div.margin-b-2rem {
+  margin-bottom: 2rem;
+}
+
+div.margin-b-5rem {
+  margin-bottom: 5rem;
+}
+
+div.margin-b-20rem {
+  margin-bottom: 20rem;
+}
+
+div.margin-l-15vw {
+  margin-left: 15vw;
+}
+
+div.margin-r-15vw {
+  margin-right: 15vw;
+}
+
+div.margin-t-15vh {
+  margin-top: 15vh;
+}
+
+div.margin-b-15vh {
+  margin-bottom: 15vh;
+}
+
+/* Padding ---------------------------------------------------------------*/
+
+div.padding-05rem {
+  padding: 0.5rem;
+}
+
+div.padding-1rem {
+  padding: 1rem;
+}
+
+div.padding-5rem {
+  padding: 5rem;
+}
+
+div.padding-lr-5rem {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+div.padding-lr-2rem {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+div.padding-lr-05rem {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+div.padding-l-1rem {
+  padding-left: 1rem;
+}
+
+div.padding-r-1rem {
+  padding-right: 1rem;
+}
+
+div.padding-t-1rem {
+  padding-top: 1rem;
+}
+
+div.padding-b-1rem {
+  padding-bottom: 1rem;
+}
+
+div.padding-b-30 {
+  padding-bottom: 30%;
 }
 
 /* Text --------------------------------------------------------------- */
 
-div.hero {
-    font-size: 10rem;
-    font-family: 'manifont grotesk';
+div.text-shout {
+  font-size: 7.5rem;
+  line-height: 95%;
+  font-family: "manifont grotesk";
+  font-optical-sizing: auto;
 }
 
-div.callout {
-    font-size: 5rem;
-    font-family: 'batmip book';
+div.text-hero {
+  font-size: 3rem;
+  line-height: 95%;
+  font-family: "manifont grotesk";
+  font-optical-sizing: auto;
 }
 
-div.body {
-    font-size: 2rem;
-    font-family: 'manifont grotesk';
-
+div.text-callout {
+  font-size: 5rem;
+  font-family: "batmip book";
+  font-optical-sizing: auto;
 }
-   
-div.caption {
-    font-size: 1rem;
-    font-family: 'monument mono';
-    color: var(--c-yellow);
+
+div.text-body {
+  font-size: 2rem;
+  font-family: "manifont grotesk";
+  font-optical-sizing: auto;
+}
+
+div.text-caption {
+  font-size: 0.5rem;
+  font-family: "monument semimono";
+  font-optical-sizing: auto;
+}
+
+div.text-border {
+  font-size: 1rem;
+  font-family: "practice sans";
+  color: black;
+  background-color: var(--c-yellow);
+  border: 5px solid var(--c-yellow);
+}
+
+div.text-text {
+  font-size: 1rem;
+  font-family: "practice sans";
+  font-optical-sizing: auto;
+}
+
+/* Text Alignment --------------------------------------------------------------- */
+
+div.textalign-center {
+  text-align: center;
+}
+
+div.textalign-left {
+  text-align: left;
+}
+
+div.textalign-right {
+  text-align: right;
+}
+
+div.textalign-justify {
+  text-align: justify;
+  text-justify: auto;
+}
+
+/* Borders --------------------------------------------------------------- */
+
+div.border-green {
+  border: 1px solid var(--c-green);
+}
+
+div.border-yellow {
+  border: 1px solid var(--c-yellow);
+}
+
+div.border-white {
+  border: 1px solid var(--c-white);
+}
+
+div.border-bottom {
+  border-bottom: 1px solid var(--c-white);
+}
+
+div.border-top {
+  border-top: 1px solid var(--c-white);
+}
+/* Lines ----------------------------------------------------------------- */
+
+.line {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 141%;
+  height: 1px;
+  background: yellow;
+  transform: rotate(30deg);
+  transform-origin: left top;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Shapes --------------------------------------------------------------- */
+
+div.box1 {
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  width: var(--w, 10%);
+  height: var(--h, 10%);
+
+  border: 2px ridge var(--c-green);
+}
+
+div.box2 {
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 0);
+  width: var(--w, 1vw);
+  height: var(--h, 1vw);
+
+  background-color: #00ff00;
+  animation-delay: var(--delay, 0s);
+}
+
+.left {
+  left: 40%;
+  animation: sway 2s ease-in-out infinite alternate;
+}
+
+.right {
+  left: 60%;
+  animation: swayReverse 2s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes swayReverse {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+.line {
+  height: 2px;
+  width: var(--x, 100%);
+  background-color: var(--c-yellow);
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  transform: rotate(deg);
+}
+
+.horizontal {
+  transform: rotate(0deg);
+}
+
+.vertical {
+  transform: rotate(90deg);
+}
+
+/* Image ----------------------------------------------------------------- */
+
+.image-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.imagefit {
+  object-fit: cover;
+}
+
+.img-resize {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+div.pixel {
+  width: 0.5vw;
+  height: 0.5vw;
+  z-index: 999;
+}
+
+div.square {
+  width: 0.5rem;
+  height: 0.5rem;
+  z-index: 999;
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+div.square-big {
+  width: 5rem;
+  height: 5rem;
+  z-index: 999;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+/* Treatment ------------------------------------------------------- */
+
+div.img-treatment {
+  mix-blend-mode: multiply;
+  opacity: 90%;
+}
+
+div.textflip {
+  transform: scale(-1, 1);
+}
+
+div.opacity-20 {
+  opacity: 20%;
 }
 
 /* Colours --------------------------------------------------------------- */
 
 div.swatch {
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
-    margin-right: 30px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin-right: 30px;
 }
 
-div.container {
-  display: flex;
-  flex-direction: row;
+div.grey {
+  color: var(--c-grey);
+}
+
+div.yellow {
+  color: var(--c-yellow);
+}
+
+div.green {
+  color: var(--c-green);
+}
+
+div.skin {
+  color: var(--c-skin);
+}
+
+div.white {
+  color: var(--c-white);
 }
 
 div.bg-grey {
-    background-color: var(--c-grey);
+  background-color: var(--c-grey);
 }
 
 div.bg-yellow {
-    background-color: var(--c-yellow);
+  background-color: var(--c-yellow);
 }
 
 div.bg-green {
-    background-color: var(--c-green);
+  background-color: var(--c-green);
 }
 
 div.bg-skin {
-    background-color: var(--c-skin);
+  background-color: var(--c-skin);
+}
+
+div.bg-white {
+  background-color: var(--c-white);
 }

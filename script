@@ -1,0 +1,13 @@
+// select all your green squares
+const squares = document.querySelectorAll(".box2");
+
+// listen for scroll
+window.addEventListener("scroll", () => {
+  let scrollY = window.scrollY;
+
+  squares.forEach((sq, i) => {
+    // make each move at a slightly different speed
+    let speed = 0.3 + (i % 5) * 0.1; // 0.3, 0.4, 0.5, etc.
+    sq.style.transform = `translateY(${scrollY * speed}px)`;
+  });
+});
