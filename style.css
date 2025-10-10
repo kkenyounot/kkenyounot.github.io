@@ -796,10 +796,6 @@ div.bg-black {
   animation: blink 1s step-start 0s infinite;
 }
 
-@keyframes slowspin {
-  transform rotate3d(0, 1, 0, 180deg);
-}
-
 .slowspin {
   animation: slowspin 4s step-start 0s infinite;
 }
