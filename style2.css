@@ -1,0 +1,943 @@
+/* General--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+:root {
+  --c-grey: #8f8f8f;
+  --c-yellow: #fff200;
+  --c-green: #00ff00;
+  --c-skin: #d7ab90;
+  --c-white: #ffffff;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--c-grey);
+  overflow-x: hidden;
+}
+
+/* Colours ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+div.swatch {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin-right: 30px;
+}
+
+div.grey {
+  color: var(--c-grey);
+}
+
+div.yellow {
+  color: var(--c-yellow);
+}
+
+div.green {
+  color: var(--c-green);
+}
+
+div.skin {
+  color: var(--c-skin);
+}
+
+div.white {
+  color: var(--c-white);
+}
+
+div.bg-grey {
+  background-color: var(--c-grey);
+}
+
+div.bg-yellow {
+  background-color: var(--c-yellow);
+}
+
+div.bg-green {
+  background-color: var(--c-green);
+}
+
+div.bg-skin {
+  background-color: var(--c-skin);
+}
+
+div.bg-white {
+  background-color: var(--c-white);
+}
+
+div.bg-black {
+  background-color: black;
+}
+
+/* Font ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@font-face {
+  font-family: "manifont grotesk";
+  src: url("Fonts/manifontgrotesk.ttf");
+}
+
+@font-face {
+  font-family: "batmip book";
+  src: url("Fonts/batmipbook.otf");
+}
+
+@font-face {
+  font-family: "monument semimono";
+  src: url("Fonts/monumentsemimono.otf");
+}
+
+@font-face {
+  font-family: "practice sans";
+  src: url("Fonts/practicesans.otf");
+}
+
+div.text-shout {
+  font-size: 7.5rem;
+  line-height: 90%;
+  font-family: "manifont grotesk";
+  font-optical-sizing: auto;
+}
+
+div.text-hero {
+  font-size: 3rem;
+  line-height: 95%;
+  font-family: "manifont grotesk";
+  font-optical-sizing: auto;
+}
+
+div.text-callout {
+  font-size: 5rem;
+  font-family: "batmip book";
+  font-optical-sizing: auto;
+}
+
+div.text-body {
+  font-size: 2rem;
+  font-family: "manifont grotesk";
+  font-optical-sizing: auto;
+}
+
+div.text-text {
+  font-size: 1rem;
+  font-family: "practice sans";
+  font-optical-sizing: auto;
+}
+
+div.text-caption {
+  font-size: 0.8rem;
+  font-family: "monument semimono";
+  font-optical-sizing: auto;
+}
+
+div.text-box {
+  font-size: 1rem;
+  font-family: "practice sans";
+  font-optical-sizing: auto;
+  color: black;
+  background-color: var(--c-yellow);
+  padding: 0.5rem 1rem; /* ← this adds space inside the box */
+  display: inline-block; /* ensures box fits text content */
+  text-align: center;
+  flex: 0 0 auto; /* don't grow/shrink */
+  width: fit-content;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+div.textalign-center {
+  text-align: center;
+}
+
+div.textalign-left {
+  text-align: left;
+}
+
+div.textalign-right {
+  text-align: right;
+}
+
+/* Flex ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+div.flex {
+  display: flex;
+}
+
+div.block {
+  display: block;
+}
+
+div.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.flex-row {
+  flex-direction: row;
+}
+
+div.flex-column {
+  flex-direction: column;
+}
+
+div.flex-justify-center {
+  justify-content: center;
+}
+
+div.flex-spacebetween {
+  justify-content: space-between;
+}
+
+div.flex-align-center {
+  align-items: center;
+}
+
+div.flex-align-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.gap-10px {
+  gap: 10px;
+}
+
+div.gap-2rem {
+  gap: 2rem;
+}
+
+/* Position -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+div.pos-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+div.pos-absolute {
+  position: absolute;
+}
+
+div.pos-relative {
+  position: relative;
+}
+
+div.pos-variable {
+  position: absolute;
+  left: var(--x, 0%);
+  top: var(--y, 0%);
+}
+
+div.pos-variable-2 {
+  position: absolute;
+  right: var(--x, 0%);
+  bottom: var(--y, 0%);
+}
+
+div.pos-move {
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+div.pos-sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+div.pos-sticky-bot {
+  position: sticky;
+  bottom: 0;
+}
+
+div.pos-top {
+  top: 0;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+div.pos-topleft {
+  top: 0;
+  left: 0;
+}
+
+div.pos-topright {
+  top: 0;
+  right: 0;
+}
+
+div.pos-botleft {
+  bottom: 0;
+  left: 0;
+}
+
+div.pos-botright {
+  bottom: 0;
+  right: 0;
+}
+
+div.pos-center {
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+div.pos-center-m {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+div.pos-center-top {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+div.pos-z999 {
+  z-index: 999;
+}
+
+div.pos-z1 {
+  z-index: 1;
+}
+
+div.pos-z-1 {
+  z-index: -1;
+}
+
+div.pos-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Width and Height -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+div.width10 {
+  width: 10%;
+}
+
+div.width20 {
+  width: 20%;
+}
+
+div.width25 {
+  width: 25%;
+}
+
+div.width30 {
+  width: 30%;
+}
+
+div.width50 {
+  width: 50%;
+}
+
+div.width70 {
+  width: 70%;
+}
+
+div.width75 {
+  width: 75%;
+}
+
+div.width80 {
+  width: 80%;
+}
+
+div.width100 {
+  width: 100%;
+}
+
+div.width100vw {
+  width: 100vw;
+}
+
+div.height10 {
+  height: 10%;
+}
+
+div.height20 {
+  height: 20%;
+}
+
+div.height25 {
+  height: 25%;
+}
+
+div.height30 {
+  height: 30%;
+}
+
+div.height50 {
+  height: 50%;
+}
+
+div.height70 {
+  height: 70%;
+}
+
+div.height75 {
+  width: 75%;
+}
+
+div.height80 {
+  width: 80%;
+}
+
+div.height100 {
+  width: 100%;
+}
+
+/*--------------- VW and VH */
+
+div.width10vw {
+  width: 10vw;
+}
+
+div.width20vw {
+  width: 20vw;
+}
+
+div.width25vw {
+  width: 25vw;
+}
+
+div.width50vw {
+  width: 50vw;
+}
+
+div.width75vw {
+  width: 75vw;
+}
+
+div.width80vw {
+  width: 80vw;
+}
+
+div.width100vw {
+  width: 100vw;
+}
+
+div.height10vh {
+  height: 10vh;
+}
+
+div.height20vh {
+  height: 20vh;
+}
+
+div.height25vh {
+  height: 25vh;
+}
+
+div.height30vh {
+  height: 30vh;
+}
+
+div.height50vh {
+  height: 50vh;
+}
+
+div.height70vh {
+  height: 70vh;
+}
+
+div.height75vh {
+  height: 75vh;
+}
+
+div.height80vh {
+  height: 80vh;
+}
+
+div.height100vh {
+  height: 100vh;
+}
+
+div.height200vh {
+  height: 200vh;
+}
+
+div.height500vh {
+  height: 500vh;
+}
+
+div.height800vh {
+  height: 800vh;
+}
+
+div.height1000vh {
+  height: 1000vh;
+}
+
+.video-container {
+  width: 100%; /* Or a specific width */
+  height: auto; /* Allow height to adjust based on content */
+  overflow: hidden; /* Hide any overflow if video is larger */
+}
+
+.video-container video {
+  width: 12%;
+  height: auto;
+  object-fit: cover; /* Fills the container, cropping if necessary */
+  display: block; /* Removes extra space below the video */
+  border: var(--c-green) solid 1px;
+}
+/* Margin -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+div.m-10rem {
+  margin: 10rem;
+}
+
+div.m-2rem {
+  margin: 2rem;
+}
+
+div.m-t-05rem {
+  margin-top: 0.5rem;
+}
+
+div.m-t-1rem {
+  margin-top: 1rem;
+}
+
+div.m-t-2rem {
+  margin-top: 2rem;
+}
+
+div.m-t-5rem {
+  margin-top: 5rem;
+}
+
+div.m-t-15vh {
+  margin-top: 15vh;
+}
+
+div.m-b-05rem {
+  margin-bottom: 0.5rem;
+}
+
+div.m-b-1rem {
+  margin-bottom: 1rem;
+}
+
+div.m-b-2rem {
+  margin-bottom: 2rem;
+}
+
+div.m-b-5rem {
+  margin-bottom: 5rem;
+}
+
+div.m-b-10vh {
+  margin-bottom: 10vh;
+}
+
+div.m-b-15vh {
+  margin-bottom: 15vh;
+}
+
+div.m-b-50vh {
+  margin-bottom: 50vh;
+}
+
+div.m-l-05rem {
+  margin-left: 0.5rem;
+}
+
+div.m-l-1rem {
+  margin-left: 1rem;
+}
+
+div.m-l-2rem {
+  margin-left: 2rem;
+}
+
+div.m-l-5rem {
+  margin-left: 5rem;
+}
+
+div.m-r-05rem {
+  margin-right: 0.5rem;
+}
+
+div.m-r-1rem {
+  margin-right: 1rem;
+}
+
+div.m-r-2rem {
+  margin-right: 2rem;
+}
+
+div.m-r-5rem {
+  margin-right: 5rem;
+}
+
+/* Padding ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+div.p-2rem {
+  padding: 2rem;
+}
+
+div.p-5rem {
+  padding: 5rem;
+}
+
+div.p-10rem {
+  padding: 10rem;
+}
+
+div.p-t-05rem {
+  padding-top: 0.5rem;
+}
+
+div.p-t-1rem {
+  padding-top: 1rem;
+}
+
+div.p-t-2rem {
+  padding-top: 2rem;
+}
+
+div.p-t-5rem {
+  padding-top: 5rem;
+}
+
+div.p-t-10vh {
+  padding-top: 10vh;
+}
+
+div.p-t-15vh {
+  padding-top: 15vh;
+}
+
+div.p-t-20vh {
+  padding-top: 20vh;
+}
+
+div.p-t-30vh {
+  padding-top: 30vh;
+}
+
+div.p-t-50vh {
+  padding-top: 50vh;
+}
+
+div.p-t-100vh {
+  padding-top: 100vh;
+}
+
+div.p-b-05rem {
+  padding-bottom: 0.5rem;
+}
+
+div.p-b-1rem {
+  padding-bottom: 1rem;
+}
+
+div.p-b-2rem {
+  padding-bottom: 2rem;
+}
+
+div.p-b-5rem {
+  padding-bottom: 5rem;
+}
+
+div.p-b-10vh {
+  padding-bottom: 10vh;
+}
+
+div.p-b-15vh {
+  padding-bottom: 15vh;
+}
+
+div.p-b-30vh {
+  padding-bottom: 30vh;
+}
+
+div.p-l-05rem {
+  padding-left: 0.5rem;
+}
+
+div.p-l-1rem {
+  padding-left: 1rem;
+}
+
+div.p-l-2rem {
+  padding-left: 2rem;
+}
+
+div.p-l-5rem {
+  padding-left: 5rem;
+}
+
+div.p-r-05rem {
+  padding-right: 0.5rem;
+}
+
+div.p-r-1rem {
+  padding-right: 1rem;
+}
+
+div.p-r-2rem {
+  padding-right: 2rem;
+}
+
+div.p-r-5rem {
+  padding-right: 5rem;
+}
+
+/* Borders --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+div.border-green {
+  border: 1px solid var(--c-green);
+}
+
+div.border-yellow {
+  border: 1px solid var(--c-yellow);
+}
+
+div.border-white {
+  border: 1px solid var(--c-white);
+}
+
+div.border-bottom {
+  border-bottom: 1px solid var(--c-white);
+}
+
+div.border-top {
+  border-top: 1px solid var(--c-white);
+}
+
+/* Treatment --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+div.opacity-20 {
+  opacity: 20%;
+}
+
+div.opacity-50 {
+  opacity: 50%;
+}
+
+/* Images --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.image-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagefit {
+  object-fit: cover;
+}
+
+.imagecontain {
+  object-fit: contain;
+}
+
+.image-move {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+div.imagebox-2 {
+  width: 10vw;
+  height: 20vw;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  background-color: black;
+}
+
+div.imagebox-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 100%;
+}
+
+div.imagebox-3 {
+  width: 10vw;
+  height: 20vw;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  background-color: black;
+}
+
+div.imagebox-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 90% 100%;
+}
+
+.fixed-size {
+  width: var(--x, 200px);
+  height: var(--y, 200px);
+  object-fit: cover; /* optional — ensures the image fills the box neatly */
+}
+
+div.img-treatment {
+  mix-blend-mode: overlay;
+  opacity: 100%;
+  border: solid 1px #fff200;
+}
+
+div.scale50 {
+  scale: 50%;
+}
+
+/* Shapes and Lines -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.line {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 141%;
+  height: 1px;
+  background: yellow;
+  transform: rotate(30deg);
+  transform-origin: left top;
+}
+
+.line {
+  height: 2px;
+  width: var(--x, 100%);
+  background-color: var(--c-yellow);
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  transform: rotate(deg);
+}
+
+.horizontal {
+  transform: rotate(0deg);
+}
+
+.vertical {
+  transform: rotate(90deg);
+}
+
+.circle {
+  width: 20px; /* Set desired width */
+  height: 20px; /* Set desired height (must be equal to width for a perfect circle) */
+  border: 2px solid yellow; /* Set border thickness, style, and color */
+  border-radius: 50%; /* Makes the square into a circle */
+  background-color: transparent; /* Ensures no fill color */
+  left: var(--x, 0);
+  top: var(--y, 0);
+  position: absolute;
+}
+
+div.box1 {
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  width: var(--w, 10%);
+  height: var(--h, 10%);
+
+  border: 2px ridge var(--c-green);
+}
+
+div.box2 {
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 0);
+  width: var(--w, 1vw);
+  height: var(--h, 1vw);
+
+  background-color: #00ff00;
+  animation-delay: var(--delay, 0s);
+}
+
+div.pixel {
+  width: 0.5vw;
+  height: 0.5vw;
+  z-index: 999;
+}
+
+div.pixel-large {
+  width: 2vw;
+  height: 2vw;
+  z-index: 999;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+div.square {
+  width: 1rem;
+  height: 1em;
+  z-index: 999;
+  position: absolute;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+div.square-big {
+  width: 5rem;
+  height: 5rem;
+  z-index: 999;
+  left: var(--x, 0);
+  top: var(--y, 0);
+}
+
+/* Animation ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------- Left and right movement */
+
+.left {
+  left: 40%;
+  animation: sway 2s ease-in-out infinite alternate;
+}
+
+.right {
+  left: 60%;
+  animation: swayReverse 2s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes swayReverse {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+/* ---------------------------------------------------------------------------------- Blink */
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.blink {
+  animation: blink 1s step-start 0s infinite;
+}
+
+.blink2 {
+  animation: blink 5s step-start 0s infinite;
+}
