@@ -21,6 +21,7 @@ img {
 body {
   background-color: var(--c-grey);
   overflow-x: hidden;
+  margin: 0;
 }
 
 /* Colours ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -745,6 +746,11 @@ div.opacity-50 {
 
 .imagecontain {
   object-fit: contain;
+}
+
+.imageanchor {
+  object-fit: cover;
+  object-position: center;
 }
 
 .image-move {
