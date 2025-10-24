@@ -100,7 +100,7 @@ div.bg-black {
 }
 
 div.text-shout {
-  font-size: 7.5rem;
+  font-size: 7rem;
   line-height: 90%;
   font-family: "manifont grotesk";
   font-optical-sizing: auto;
@@ -115,12 +115,14 @@ div.text-hero {
 
 div.text-callout {
   font-size: 5rem;
+  line-height: 95%;
   font-family: "batmip book";
   font-optical-sizing: auto;
 }
 
 div.text-body {
   font-size: 2rem;
+  line-height: 2.1rem;
   font-family: "manifont grotesk";
   font-optical-sizing: auto;
 }
@@ -525,6 +527,10 @@ div.m-t-15vh {
   margin-top: 15vh;
 }
 
+div.m-t-20vh {
+  margin-top: 20vh;
+}
+
 div.m-b-05rem {
   margin-bottom: 0.5rem;
 }
@@ -547,6 +553,10 @@ div.m-b-10vh {
 
 div.m-b-15vh {
   margin-bottom: 15vh;
+}
+
+div.m-b-20vh {
+  margin-bottom: 20vh;
 }
 
 div.m-b-50vh {
@@ -595,8 +605,16 @@ div.p-5rem {
   padding: 5rem;
 }
 
+div.p-7rem {
+  padding: 7rem;
+}
+
 div.p-10rem {
   padding: 10rem;
+}
+
+div.p-30vh {
+  padding: 30vh;
 }
 
 div.p-t-05rem {
@@ -667,6 +685,10 @@ div.p-b-30vh {
   padding-bottom: 30vh;
 }
 
+div.p-b-50vh {
+  padding-bottom: 50vh;
+}
+
 div.p-l-05rem {
   padding-left: 0.5rem;
 }
@@ -683,6 +705,10 @@ div.p-l-5rem {
   padding-left: 5rem;
 }
 
+div.p-l-10rem {
+  padding-left: 10rem;
+}
+
 div.p-r-05rem {
   padding-right: 0.5rem;
 }
@@ -697,6 +723,10 @@ div.p-r-2rem {
 
 div.p-r-5rem {
   padding-right: 5rem;
+}
+
+div.p-r-10rem {
+  padding-right: 10rem;
 }
 
 /* Borders --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -807,6 +837,10 @@ div.scale50 {
   scale: 50%;
 }
 
+div.scale70 {
+  scale: 70%;
+}
+
 /* Shapes and Lines -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .line {
@@ -899,6 +933,11 @@ div.square-big {
   z-index: 999;
   left: var(--x, 0);
   top: var(--y, 0);
+}
+
+div.bgbox {
+  width: 10rem;
+  height: 10rem;
 }
 
 /* Animation ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
