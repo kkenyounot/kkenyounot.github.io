@@ -100,29 +100,29 @@ div.bg-black {
 }
 
 div.text-shout {
-  font-size: 7rem;
+  font-size: 6vw;
   line-height: 90%;
   font-family: "manifont grotesk";
   font-optical-sizing: auto;
 }
 
 div.text-hero {
-  font-size: 3rem;
-  line-height: 95%;
+  font-size: 2.3vw;
+  line-height: 100%;
   font-family: "manifont grotesk";
   font-optical-sizing: auto;
 }
 
 div.text-callout {
-  font-size: 5rem;
+  font-size: 4vw;
   line-height: 95%;
   font-family: "batmip book";
   font-optical-sizing: auto;
 }
 
 div.text-body {
-  font-size: 2rem;
-  line-height: 2.1rem;
+  font-size: 1.5vw;
+  line-height: 110%;
   font-family: "manifont grotesk";
   font-optical-sizing: auto;
 }
