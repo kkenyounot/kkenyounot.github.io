@@ -1,0 +1,22 @@
+body {
+  background-color: #754025;
+}
+
+@font-face {
+  font-family: "fieldsans";
+  src: url(Fonts/FieldSans-Regular.woff);
+  format: ("woff");
+
+  font-family: "fieldsans-display";
+  src: url(Fonts/FieldSans-Display.woff);
+  format: ("woff");
+
+  font-family: "fungal";
+  src: url(Fonts/FungalVF.woff);
+  format: ("woff");
+}
+
+h1 {
+  font-family: "fieldsans";
+  color: #ffffbb;
+}
