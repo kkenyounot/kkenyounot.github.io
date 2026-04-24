@@ -1,23 +1,83 @@
+/* Resources */
+
 body {
   background-color: #754025;
 }
 
 @font-face {
-  font-family: "fieldsans";
+  font-family: "fs";
   src: url(Fonts/FieldSans-Regular.woff);
   format: ("woff");
+}
 
-  font-family: "fieldsans-display";
+@font-face {
+  font-family: "fsd";
   src: url(Fonts/FieldSans-Display.woff);
   format: ("woff");
+}
 
+@font-face {
   font-family: "fungal";
   src: url(Fonts/FungalVF.woff);
   format: ("woff");
 }
 
-h1 {
-  font-family: "fieldsans-display";
+div.test {
+  background-color: chartreuse;
+}
+
+/* Text Styles */
+
+div.body {
+  font-family: "fs";
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+div.caption {
+  font-family: "fs";
+  font-size: 1em;
+  line-height: 1;
+}
+
+div.underline {
+  text-decoration: underline;
+}
+
+/* Colors */
+
+div.yellow {
   color: #ffffbb;
-  font-size: 5em;
+}
+
+div.blue {
+  color: #8eb5f9;
+}
+
+/* Flex Tools */
+div.flex-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* Boxes */
+div.width100 {
+  width: 100%;
+}
+
+div.width50 {
+  width: 50%;
+}
+
+div.left {
+  width: 50%;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+div.right {
+  width: 50%;
+  margin-left: auto;
+  margin-bottom: 1em;
 }
