@@ -3,7 +3,7 @@ body {
 }
 
 @font-face {
-  font-family: "fieldsans2";
+  font-family: "fieldsans";
   src: url(Fonts/FieldSans-Regular.woff);
   format: ("woff");
 
@@ -17,6 +17,7 @@ body {
 }
 
 h1 {
-  font-family: "fieldsans2";
+  font-family: "fieldsans-display";
   color: #ffffbb;
+  font-size: 5em;
 }
