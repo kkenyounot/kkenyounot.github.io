@@ -20,10 +20,7 @@ body {
   font-family: "fungal";
   src: url(Fonts/FungalVF.woff);
   format: ("woff");
-}
-
-div.test {
-  background-color: chartreuse;
+  font-weight: 100 1000;
 }
 
 /* Text Styles */
@@ -42,6 +39,27 @@ div.caption {
 
 div.underline {
   text-decoration: underline;
+}
+
+div.fungal {
+  font-family: "fungal";
+  font-size: 1.75em;
+}
+
+div.var {
+  font-variation-settings:
+    "THCK" 500,
+    "grow" 1000;
+}
+
+div.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.relative {
+  position: relative;
 }
 
 /* Colors */
@@ -83,6 +101,7 @@ div.left {
   margin-right: auto;
   margin-bottom: 1em;
   margin-top: 1em;
+  margin-left: 0.5em;
 }
 
 div.right {
@@ -91,6 +110,11 @@ div.right {
   margin-bottom: 1em;
 }
 
+div.right2 {
+  width: 75%;
+  margin-left: auto;
+  margin-bottom: 1em;
+}
 /* Images */
 
 div.img {
@@ -116,4 +140,76 @@ div.img {
   50% {
     opacity: 0;
   }
+}
+
+.growth {
+  animation: growth 1.5s infinite;
+}
+
+@keyframes growth {
+  0% {
+    font-variation-settings:
+      "THCK" 100,
+      "grow" 200;
+  }
+  100% {
+    font-variation-settings:
+      "THCK" 1000,
+      "grow" 2000;
+  }
+}
+
+.pulse {
+  animation: pulse 1s infinite alternate;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    font-variation-settings:
+      "THCK" 100,
+      "grow" 200;
+  }
+  100% {
+    font-variation-settings:
+      "THCK" 300,
+      "grow" 800;
+  }
+}
+
+.pulses {
+  animation: pulses 1s infinite alternate;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes pulses {
+  0% {
+    font-variation-settings:
+      "THCK" 100,
+      "grow" 200;
+  }
+
+  100% {
+    font-variation-settings:
+      "THCK" 1000,
+      "grow" 1000;
+  }
+}
+
+div.grow {
+  font-family: "fungal";
+  font-variation-settings:
+    "THCK" 100,
+    "grow" 200;
+  transition: font-variation-settings 0.3s ease;
+}
+
+div.grow:hover {
+  font-variation-settings:
+    "THCK" 1000,
+    "grow" 2000;
 }
