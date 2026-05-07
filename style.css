@@ -37,6 +37,15 @@ div.caption {
   line-height: 1;
 }
 
+div.fungalcaption {
+  font-family: "fungal";
+  font-size: 1em;
+  line-height: 1;
+  font-variation-settings:
+    "THCK" 500,
+    "grow" 1000;
+}
+
 div.underline {
   text-decoration: underline;
 }
@@ -46,11 +55,36 @@ div.fungal {
   font-size: 1.75em;
 }
 
+div.fungal2 {
+  font-family: "fungal";
+  font-size: 1.75em;
+  font-variation-settings:
+    "THCK" 200,
+    "grow" 5000;
+}
+
+div.fungal-large {
+  font-family: "fungal";
+  font-size: 5em;
+}
+
 div.var {
   font-variation-settings:
     "THCK" 500,
     "grow" 1000;
 }
+
+div.embossed {
+  color: #754025; /* Match or keep close to the background color */
+  font-family: "fs";
+  font-size: 1em;
+  font-weight: bold;
+  /* Light highlight (top-left) and dark shadow (bottom-right) */
+  text-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.2),
+    1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+/* Positions */
 
 div.absolute {
   position: absolute;
@@ -60,6 +94,14 @@ div.absolute {
 
 div.relative {
   position: relative;
+}
+
+div.inlineblock {
+  display: inline-block;
+}
+
+div.back {
+  z-index: -1;
 }
 
 /* Colors */
@@ -87,7 +129,18 @@ div.flex-row {
 div.j-sb {
   justify-content: space-between;
 }
+
+div.j-center {
+  justify-content: center;
+  align-items: center;
+}
+
 /* Boxes */
+
+div.height100vh {
+  height: 100vh;
+}
+
 div.width100 {
   width: 100%;
 }
@@ -96,11 +149,27 @@ div.width50 {
   width: 50%;
 }
 
+div.width60 {
+  width: 60%;
+}
+
+div.width70 {
+  width: 70%;
+}
+
+div.width80 {
+  width: 80%;
+}
+
+div.width90 {
+  width: 90%;
+}
+
 div.left {
   width: 50%;
   margin-right: auto;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin-bottom: 5em;
+  margin-top: 5em;
   margin-left: 0.5em;
 }
 
@@ -110,11 +179,11 @@ div.right {
   margin-bottom: 1em;
 }
 
-div.right2 {
-  width: 75%;
+div.right0 {
   margin-left: auto;
   margin-bottom: 1em;
 }
+
 /* Images */
 
 div.img {
@@ -127,7 +196,22 @@ div.img {
   }
 }
 
+.imgbox {
+  width: 20vw;
+  aspect-ratio: 1.5/1;
+  overflow: hidden;
+}
+
+.imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  outline: 10px solid #8eb5f9;
+  outline-offset: -5px;
+}
+
 /* Animation */
+
 .blink {
   animation: blink 1s step-start infinite;
 }
@@ -161,9 +245,6 @@ div.img {
 
 .pulse {
   animation: pulse 1s infinite alternate;
-  &:hover {
-    animation-play-state: paused;
-  }
 }
 
 @keyframes pulse {
@@ -179,14 +260,49 @@ div.img {
   }
 }
 
-.pulses {
-  animation: pulses 1s infinite alternate;
-  &:hover {
-    animation-play-state: paused;
+.pulse2 {
+  animation: pulse2 1s infinite alternate;
+}
+
+@keyframes pulse2 {
+  0% {
+    font-variation-settings:
+      "THCK" 100,
+      "grow" 200;
+  }
+
+  100% {
+    font-variation-settings:
+      "THCK" 500,
+      "grow" 500;
   }
 }
 
-@keyframes pulses {
+.pulse3 {
+  animation: pulse3 1s infinite alternate;
+  animation-timing-function: ease;
+}
+
+@keyframes pulse3 {
+  0% {
+    font-variation-settings:
+      "THCK" 100,
+      "grow" 200;
+  }
+
+  100% {
+    font-variation-settings:
+      "THCK" 700,
+      "grow" 700;
+  }
+}
+
+.pulse4 {
+  animation: pulse4 1s infinite alternate;
+  animation-timing-function: ease;
+}
+
+@keyframes pulse4 {
   0% {
     font-variation-settings:
       "THCK" 100,
@@ -212,4 +328,25 @@ div.grow:hover {
   font-variation-settings:
     "THCK" 1000,
     "grow" 2000;
+}
+
+div.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: orbit 15s linear infinite;
+
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateX(30vmin);
+}
+
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(30vmin)
+      rotate(calc(var(--angle) * -1));
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(calc(var(--angle) + 360deg))
+      translateX(30vmin) rotate(calc((var(--angle) + 360deg) * -1));
+  }
 }
