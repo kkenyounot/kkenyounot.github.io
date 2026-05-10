@@ -1,8 +1,17 @@
 /* Resources */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
 body {
   background-color: #754025;
-  overflow-x: hidden;
 }
 
 @font-face {
