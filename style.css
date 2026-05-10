@@ -435,6 +435,8 @@ div.orbit {
   animation-delay: 4s;
 }
 
+/* ── Responsive ── */
+
 /* ── Tablet ── */
 @media (max-width: 768px) {
   div.left,
