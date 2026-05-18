@@ -591,6 +591,10 @@ div.orbit {
   div.fungal-large {
     font-size: 2em;
   }
+
+  div.splashtext {
+    font-size: 5em;
+  }
 }
 
 .hidden {
@@ -639,7 +643,7 @@ div.splashtext {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "fs";
-  font-size: 12rem;
+  font-size: 10em;
   text-align: center;
   line-height: 0.8;
   color: #754025;
