@@ -1,5 +1,5 @@
-document.getElementById("splash").addEventListener("click", () => {
-  document.getElementById("splash").classList.add("hidden");
+document.querySelector(".splash-overlay").addEventListener("click", () => {
+  document.querySelector(".splash").classList.add("hidden");
 });
 
 const observer = new IntersectionObserver(
